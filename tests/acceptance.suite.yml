@@ -13,7 +13,7 @@ modules:
             port: 80
             browser: chrome
             capabilities:
-                testobject_api_key: 'API KEY'
+                testobject_api_key: %TESTOBJECT_API_KEY%
                 testobject_device: Samsung_Galaxy_S7_real
                 testobject_appium_version: 1.5.2-updated-chromedriver
 #	- PhpBrowser:
