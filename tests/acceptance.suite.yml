@@ -7,15 +7,14 @@
 class_name: AcceptanceTester
 modules:
     enabled:
-        - WebDriver:
+        - WebDriver
+    config:
+        WebDriver:
             url: 'https://testobject.com'
             host: 'appium.testobject.com'
             port: 80
             browser: chrome
             capabilities:
                 testobject_api_key: %TESTOBJECT_API_KEY%
-                testobject_device: Samsung_Galaxy_S7_real
-                testobject_appium_version: 1.5.2-updated-chromedriver
-#	- PhpBrowser:
-#            url: http://testobject.com
-#        - \Helper\Acceptance
+                testobject_device: %TESTOBJECT_DEVICE%
+                testobject_appium_version: %TESTOBJECT_APPIUM_VERSION%
