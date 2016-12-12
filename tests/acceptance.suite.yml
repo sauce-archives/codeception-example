@@ -1,0 +1,21 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: 'https://testobject.com'
+            host: 'appium.testobject.com'
+            port: 80
+            browser: chrome
+            capabilities:
+                testobject_api_key: 'API KEY'
+                testobject_device: Samsung_Galaxy_S7_real
+                testobject_appium_version: 1.5.2-updated-chromedriver
+#	- PhpBrowser:
+#            url: http://testobject.com
+#        - \Helper\Acceptance
