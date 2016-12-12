@@ -20,13 +20,11 @@ The test can be run on both Android and iOS devices.
 
 To run the test, execute `codecept run`
 
+### Running with docker
 
-<!--
-Into /etc/php.ini to resolve error
+Alternatively, tests can be run using docker:
+
 ```
-[Date]
-; Defines the default timezone used by the date functions
-; http://php.net/date.timezone
-date.timezone = America/New_York
+./docker-build.sh
+./docker-run.sh <device> <appium version> <api key>
 ```
--->
