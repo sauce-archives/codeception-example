@@ -14,6 +14,7 @@ You then need to set the device, appium version, and api key:
 export TESTOBJECT_DEVICE=your test device
 export TESTOBJECT_APPIUM_VERSION=1.5.2-updated-chromedriver
 export TESTOBJECT_API_KEY=your api key
+export APPIUM_ENDPOINT=http://appium.testobject.com
 ```
 
 The test can be run on both Android and iOS devices.
@@ -26,5 +27,5 @@ Alternatively, tests can be run using docker:
 
 ```
 ./docker-build.sh
-./docker-run.sh <device> <appium version> <api key>
+./docker-run.sh <device> <appium version> <api key> http://appium.testobject.com
 ```

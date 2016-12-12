@@ -11,7 +11,7 @@ modules:
     config:
         WebDriver:
             url: 'https://testobject.com'
-            host: 'appium.testobject.com'
+            host: %APPIUM_ENDPOINT%
             port: 80
             browser: chrome
             capabilities:
