@@ -5,7 +5,7 @@ RUN mkdir -p /root/codeception-example
 ADD . /root/codeception-example
 WORKDIR /root/codeception-example
 
-RUN apt-get update && apt-get install -y wget
-RUN wget http://codeception.com/codecept.phar && chmod u+x codecept.phar
+RUN apt-get update; apt-get install -y wget
+RUN wget http://codeception.com/codecept.phar; chmod u+x codecept.phar; sync && /root/codeception-example/codecept.phar build
 
 CMD /root/codeception-example/codecept.phar run

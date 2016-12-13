@@ -1,2 +1,6 @@
 vendor/
-_*
+_output
+_data
+_support
+_envs
+codecept.phar
