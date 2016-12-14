@@ -7,4 +7,4 @@ WORKDIR /root/codeception-example
 
 RUN /root/codeception-example/codecept.phar build
 
-CMD /root/codeception-example/codecept.phar run
+CMD TESTOBJECT_TESTUUID=$(cat /proc/sys/kernel/random/uuid) /root/codeception-example/codecept.phar run --debug

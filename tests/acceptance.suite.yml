@@ -10,11 +10,12 @@ modules:
         - WebDriver
     config:
         WebDriver:
-            url: 'https://testobject.com'
+            url: 'https://google.com'
             host: '%APPIUM_ENDPOINT%'
             port: 80
             browser: chrome
             capabilities:
+                testobject_testuuid: %TESTOBJECT_TESTUUID%
                 testobject_api_key: %TESTOBJECT_API_KEY%
                 testobject_device: %TESTOBJECT_DEVICE%
                 testobject_appium_version: %TESTOBJECT_APPIUM_VERSION%
