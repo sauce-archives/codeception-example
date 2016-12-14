@@ -3,11 +3,7 @@
 An example [codeception](http://codeception.com) test configured to run on TestObject.
 
 
-To run the test, first install codeception:
-```
-wget http://codeception.com/codecept.phar
-alias codecept='codecept.phar'
-```
+To run the test, first install codeception: `alias codecept='codecept.phar'`
 
 You then need to set the device, appium version, and api key:
 ```
@@ -29,3 +25,7 @@ Alternatively, tests can be run using docker:
 ./docker-build.sh
 ./docker-run.sh <device> <appium version> <api key> http://appium.testobject.com
 ```
+
+### Downloading codeception
+
+Codeception can be downloaded with wget: `wget http://codeception.com/codecept.phar`
