@@ -9,10 +9,10 @@ pipeline {
                 expression { params.APPIUM_ENDPOINT == 'appium.staging.testobject.org' }
             }
             steps {
-                lock (resource: params.ANDROID_DEVICE) {
+                lock (resource: params.TESTOBJECT_DEVICE) {
                     sh "chmod u+x docker-build.sh && chmod u+x docker-run.sh"
                     sh "./docker-build.sh"
-                    sh "./docker-run.sh $ANDROID_DEVICE $TESTOBJECT_APPIUM_VERSION $TESTOBJECT_API_KEY $APPIUM_ENDPOINT"
+                    sh "./docker-run.sh $TESTOBJECT_DEVICE $TESTOBJECT_APPIUM_VERSION $TESTOBJECT_API_KEY $APPIUM_ENDPOINT"
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh "chmod u+x docker-build.sh && chmod u+x docker-run.sh"
                 sh "./docker-build.sh"
-                sh "./docker-run.sh $ANDROID_DEVICE $TESTOBJECT_APPIUM_VERSION $TESTOBJECT_API_KEY $APPIUM_ENDPOINT"
+                sh "./docker-run.sh $TESTOBJECT_DEVICE $TESTOBJECT_APPIUM_VERSION $TESTOBJECT_API_KEY $APPIUM_ENDPOINT"
             }
         }
     }
