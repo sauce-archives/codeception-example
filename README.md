@@ -2,20 +2,21 @@
 
 An example [codeception](http://codeception.com) test configured to run on TestObject.
 
-
-To run the test, first install codeception: `alias codecept='codecept.phar'`
-
-You then need to set the device, appium version, and api key:
+You then need to set environment variables like the device, appium version, and api key:
 ```
-export TESTOBJECT_DEVICE=your test device
-export TESTOBJECT_APPIUM_VERSION=1.5.2-updated-chromedriver
+export TESTOBJECT_DEVICE=your test device Android or iOS
+export TESTOBJECT_APPIUM_VERSION=appium version to use e.g. 1.5.2-updated-chromedriver
 export TESTOBJECT_API_KEY=your api key
-export APPIUM_ENDPOINT=http://appium.testobject.com
+export APPIUM_ENDPOINT=appium.testobject.com
 ```
 
-The test can be run on both Android and iOS devices.
+### Run:
 
-To run the test, execute `codecept run`
+0. set environment variables.
+1. navigate to project path `cd your/path/codeception-example`
+2. biuld it using `./codecept.phar build` or `php codecept.phar build`
+3. use `./codecept.phar run` or `php codecept.phar run` to run it with basic cpabilities
+4. to run with the _staging_ capabilities e.g. staging use `./codecept.phar run --env staging` or `php codecept.phar run --env staging` (configuration file: `acceptance.suite.yml`).
 
 ### Running with docker
 
@@ -23,7 +24,7 @@ Alternatively, tests can be run using docker:
 
 ```
 ./docker-build.sh
-./docker-run.sh <device> <appium version> <api key> http://appium.testobject.com
+./docker-run.sh <device> <appium version> <api key> appium.testobject.com
 ```
 
 ### Downloading codeception
