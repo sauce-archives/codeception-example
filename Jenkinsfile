@@ -2,6 +2,9 @@
 
 def runTest() {
     node {
+        stage("checkout") {
+            checkout scm
+        }
         stage("test") {
             try {
                 sh "chmod u+x docker-build.sh && chmod u+x docker-run.sh"
