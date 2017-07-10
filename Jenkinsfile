@@ -6,9 +6,9 @@ def runTest() {
             checkout scm
         }
         stage("test") {
-            sh "chmod u+x docker-build.sh && chmod u+x docker-run.sh"
-            sh "./docker-build.sh"
-            sh "./docker-run.sh $TESTOBJECT_DEVICE $TESTOBJECT_APPIUM_VERSION $TESTOBJECT_API_KEY $APPIUM_ENDPOINT"
+            docker.build("codeception").inside {
+                sh "codecept run"
+            }
         }
     }
 }
