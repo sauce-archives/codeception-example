@@ -1,13 +1,14 @@
 #!groovy
 
-def runTest() {
+def runTest(args) {
     node {
         stage("checkout") {
             checkout scm
         }
         stage("test") {
             docker.build("codeception").inside {
-                sh "codecept run"
+                sh "./codecept.phar build"
+                sh "./codecept.phar run $args"
             }
         }
     }
@@ -15,7 +16,7 @@ def runTest() {
 
 if (env.APPIUM_ENDPOINT.contains("staging.testobject.org")) {
     lock (resource: params.TESTOBJECT_DEVICE) {
-        runTest()
+        runTest('--env staging')
     }
 } else {
     try {
