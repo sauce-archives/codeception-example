@@ -16,7 +16,7 @@ export APPIUM_ENDPOINT=appium.testobject.com
 1. navigate to project path `cd your/path/codeception-example`
 2. biuld it using `./codecept.phar build` or `php codecept.phar build`
 3. use `./codecept.phar run` or `php codecept.phar run` to run it with basic cpabilities
-4. to run with the _staging_ capabilities e.g. staging use `./codecept.phar run --env staging` or `php codecept.phar run --env staging` (configuration file: `acceptance.suite.yml`).
+4. to run it with the _staging_ capabilities use `./codecept.phar run --env staging` or `php codecept.phar run --env staging` (configuration file: `acceptance.suite.yml`).
 
 ### Running with docker
 
