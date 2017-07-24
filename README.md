@@ -15,8 +15,8 @@ export APPIUM_URL=appium.testobject.com
 0. set environment variables.
 1. navigate to project path `cd your/path/codeception-example`
 2. biuld it using `./codecept.phar build` or `php codecept.phar build`
-3. use `./codecept.phar run` or `php codecept.phar run` to run it with basic cpabilities
-4. to run it with the _staging_ capabilities use `./codecept.phar run --env staging` or `php codecept.phar run --env staging` (configuration file: `acceptance.suite.yml`).
+3. use `./codecept.phar run` or `php codecept.phar run` to run it with basic capabilities
+4. to run it with the _staging_ capabilities use `./codecept.phar run --env staging` or `php codecept.phar run --env staging` (the configuration file: `acceptance.suite.yml`).
 
 ### Running with docker
 
