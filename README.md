@@ -7,7 +7,7 @@ You then need to set environment variables like the device, appium version, and 
 export TESTOBJECT_DEVICE=your test device Android or iOS
 export TESTOBJECT_APPIUM_VERSION=appium version to use e.g. 1.5.2-updated-chromedriver
 export TESTOBJECT_API_KEY=your api key
-export APPIUM_ENDPOINT=appium.testobject.com
+export APPIUM_URL=appium.testobject.com
 ```
 
 ### Run:
