@@ -8,7 +8,11 @@ try {
         stage("test") {
             docker.build("codeception").inside {
                 sh "./codecept.phar build"
-                sh "./codecept.phar run ${env.ARGS} -vv"
+                if(env.ENVIRONMENT) {
+                    sh "./codecept.phar run ${env.ENVIRONMENT} -vv"
+                } else {
+                    sh "./codecept.phar run -vv"
+                }
             }
         }
     }
