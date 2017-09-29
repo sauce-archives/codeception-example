@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker run --rm -e "TESTOBJECT_DEVICE=$1" -e "TESTOBJECT_APPIUM_VERSION=$2" -e "TESTOBJECT_API_KEY=$3" -e "APPIUM_URL=$4"  codeception-example
+docker run --rm -e "TESTOBJECT_API_KEY=$1" -e "PLATFORM_NAME=$2" -e "PLATFORM_VERSION=$3" -e "APPIUM_URL=$4"  codeception-example
