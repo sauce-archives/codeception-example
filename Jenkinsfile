@@ -9,9 +9,9 @@ try {
 			docker.build("codeception").inside {
 				sh "./codecept.phar build"
 				if(env.ENVIRONMENT) {
-					sh "./codecept.phar run ${env.ENVIRONMENT} -vv"
+					sh "./codecept.phar run ${env.ENVIRONMENT} -vv --env specific_appium_version"
 				} else {
-					sh "./codecept.phar run -vv"
+					sh "./codecept.phar run -vv --env specific_appium_version"
 				}
 			}
 		}
