@@ -4,7 +4,11 @@
 
 def test = {
     sh "./codecept.phar build"
-    sh "./codecept.phar run --env ${env.ENVIRONMENT ?: ""} -vv"
+    if (env.ENVIRONMENT) {
+        sh "./codecept.phar run --env ${env.ENVIRONMENT} -vv"
+    } else {
+        sh "./codecept.phar run -vv"
+    }
 }
 
 TestRunner {
