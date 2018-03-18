@@ -13,7 +13,7 @@ def test = {
 }
 
 TestRunner {
-    dockerImage = "codeception"
+    useDockerFile = true
     collectJunitReport = false
     steps = test
 }
