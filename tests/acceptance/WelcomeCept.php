@@ -1,6 +1,6 @@
 <?php
 $capabilities = $scenario->current('capabilities');
-print_r($capabilities)
+print_r($capabilities);
 codecept_debug($capabilities);
 
 $I = new AcceptanceTester($scenario);
