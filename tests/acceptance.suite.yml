@@ -15,7 +15,6 @@ modules:
             port: 80
             browser: chrome
             capabilities:
-                testobject_testuuid: %TESTOBJECT_TESTUUID%
                 testobject_api_key: %TESTOBJECT_API_KEY%
                 platformName: %PLATFORM_NAME%
                 platformVersion: %PLATFORM_VERSION%
